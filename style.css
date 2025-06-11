@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #212121;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+body.light-mode {
+  background: #f0f0f0;
+  color: #212121;
+}
+
+body.light-mode .navbar {
+  background: #ffffff;
+  color: #2f78ff;
+}
+
+body.light-mode .upload-container {
+  background-color: #ffffffb3;
+  color: #212121;
+  border-color: #2f78ff;
+}
+
+body.light-mode .file-name {
+  color: #212121;
+}
+
+body.light-mode .file-label {
+  background-color: #2f78ff33;
+  color: #212121;
+  border-color: #2f78ff;
+}
+
+body.light-mode .file-label:hover {
+  background-color: #2f78ff55;
+  color: #ffffff;
+}
+
+body.light-mode .upload-button {
+  background-color: #2f78ff;
+  color: #ffffff;
+  border-color: #2f78ff;
+}
+
+body.light-mode .upload-button:hover {
+  background-color: #ffffff;
+  color: #2f78ff;
+  border-color: #2f78ff;
+}
+
+body.light-mode .wishlist-btn,
+body.light-mode .remove-btn {
+  background: rgba(255, 255, 255, 0.5);
+  color: #212121;
+}
+
+body.light-mode .wishlist-btn:hover,
+body.light-mode .remove-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #2f78ff;
+}
+
+.navbar {
+  background: #2f78ff;
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  font-size: 1.25rem;
+  font-family: "Courgette", sans-serif;
+  padding: 0 10px;
+  width: 35%;
+}
+
+#logo .fa-mountain-sun {
+  margin: 0 5px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 15px;
+  width: 35%;
+}
+
+li i {
+  margin: 0 5px;
+}
+
+.animate {
+  border: 2px solid;
+  border-radius: 6px;
+  padding: 7px;
+  background: transparent;
+
+  &:hover {
+    background-color: white;
+    color: #2f78ff;
+  }
+}
+
+.icons li {
+  list-style-type: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: underline 1px solid transparent;
+  margin: 0 5px;
+
+  &:hover {
+    text-decoration: underline 1px solid;
+    text-underline-offset: 3px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+}
+
+main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-container {
+  background-color: #2f78ff6b;
+  width: 50%;
+  height: auto;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 2px dotted #ccc;
+  text-align: center;
+  color: white;
+  margin: 20px;
+}
+
+.file-label {
+  display: inline-block;
+  background-color: #2f78ffa0;
+  color: white;
+  padding: 20px;
+  width: 60%;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  border: 2px solid;
+}
+
+.file-label:hover {
+  background-color: #212121a0;
+  color: #75a5ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-name {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.upload-button {
+  background-color: cyan;
+  color: #212121;
+  border: 2px solid white;
+  width: 45%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #212121a0;
+  color: cyan;
+  border: 2px solid cyan;
+}
+
+#image-gallery {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  position: relative;
+  margin: 20px;
+}
+
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  height: 400px;
+  width: auto;
+  object-fit: contain;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid white;
+
+  &:hover {
+    transition: all 0.33s;
+    border: 1px solid white;
+  }
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 5px;
+  font-size: 16px;
+  color: grey;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1;
+  left: 5px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 5px;
+  font-size: 16px;
+  color: red;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  right: 5px;
+  z-index: 1;
+}
+
+.wishlist-btn.active {
+  color: red;
+}
+
+.wishlist-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="nav">
+                <div id="logo"><i class="fa-solid fa-mountain-sun"></i> Photo Gallery</div>
+                <div class="icons">
+                    <li class="home animate"><i class="fa-solid fa-images"></i>Gallery</li>
+                    <li class="wishlist animate"><i class="fa-solid fa-heart"></i>Wishlist</li>
+                    <li class="mode"><i class="fa-solid fa-sun"></i></i></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="upload-container">
+            <label for="fileInput" class="file-label">Choose Files</label>
+            <input type="file" id="fileInput" class="file-input" multiple>
+            <span id="fileName" class="file-name">No file chosen</span>
+            <br><br>
+            <button class="upload-button">Upload <i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+        </div>
+    </main>
+    <main id="image-gallery">
+        <div class="image-container"></div>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        
+    </footer>
+</body>
+</html>
